@@ -223,7 +223,7 @@ JAZZMIN_SETTINGS = {
         },
 
     # Rutas relativas a scripts CSS/JS personalizados 
-    "custom_css": "/StyleTatto/StyleTatto/css/style.css",
+    "custom_css": "./css/style.css",
 
     # (deben estar presentes en archivos estáticos) "custom_css": None,
     "custom_js": None,
@@ -232,9 +232,6 @@ JAZZMIN_SETTINGS = {
 
 
 
-JAZZMIN_UI_TWEAKS = {
-    "theme": "darkly",
-}
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # IMPORTANCION DE LA IMG
