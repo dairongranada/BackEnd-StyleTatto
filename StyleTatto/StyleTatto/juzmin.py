@@ -1,40 +1,41 @@
-JAZZMIN_SETTINGS = {
-    # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "STYLE TATOO Admin",
+JAZZMIN_SETTINGS = {    
+    # título de la ventana (Se establecerá de forma predeterminada en 
+    # current_admin_site.site_title si está ausente o Ninguno)
+    "site_title": "STYLE TATTO Admin",
 
-    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "STYLE TATOO",
+    # Título en la pantalla de inicio de sesión (19 caracteres como máximo) 
+    # (predeterminado en current_admin_site.site_header si está ausente o Ninguno)
+    "site_header": "STYLE TATTO",
     
-    "site_brand": "STYLE TATOO",
+    "site_brand": "STYLE TATTO",
 
 
-    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-
-    # Logo to use for your site, must be present in static files, used for brand on top left
-
-    # CSS classes that are applied to the logo above
+    # clases de CSS que se aplican al logotipo de arriba
     "site_logo_classes": "img-circle",
 
-    # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
+    # Ruta relativa a un favicon para su sitio, por defecto será site_logo si 
+    # está ausente (idealmente 32x32 px)
     "site_icon": None,
 
-    # Welcome text on the login screen
-    "welcome_sign": "Welcome to the STYLE TATOO",
+    # Texto de bienvenida en la pantalla de inicio de sesión
+    "welcome_sign": "bienvenido a STYLE TATTO",
 
     # Copyright on the footer
-    "copyright": "STYLE TATOO",
+    "copyright": "STYLE TATTO",
 
-    # The model admin to search from the search bar, search bar omitted if excluded
+    # El administrador del modelo para buscar desde la barra de búsqueda, 
+    # la barra de búsqueda se omite si se excluye
     "search_model": "auth.User",
 
-    # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
+    # Nombre de campo en el modelo de usuario que contiene avatar 
+    # ImageField/URLField/Charfield o un invocable que recibe al usuario
     "user_avatar": None,
 
     ############
     # Top Menu #
     ############
 
-    # Links to put along the top menu
+    # Enlaces para poner a lo largo del menú superior
     "topmenu_links": [
         
         {"name": "Home Admin",  "url": "admin:index", "permissions": ["auth.view_user"]},
@@ -50,8 +51,9 @@ JAZZMIN_SETTINGS = {
     # User Menu #
     #############
 
-    # Additional links to include in the user menu on the top right ("app" url type is not allowed)
-    "usermenu_links": [
+    # Enlaces adicionales para incluir en el menú de usuario en la parte superior 
+    # derecha (no se permite el tipo de URL de "aplicación")
+        "usermenu_links": [
         {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
         {"model": "auth.user"}
     ],
@@ -60,22 +62,24 @@ JAZZMIN_SETTINGS = {
     # Side Menu #
     #############
 
-    # Whether to display the side menu
+    # Ya sea para mostrar el menú lateral
     "show_sidebar": True,
 
-    # Whether to aut expand the menu
+    # Ya sea para aut expandir el menú
     "navigation_expanded": True,
 
-    # Hide these apps when generating side menu e.g (auth)
+    # Ocultar estas aplicaciones al generar el menú lateral, por ejemplo (autorización)
     "hide_apps": [],
 
-    # Hide these models when generating side menu (e.g auth.user)
+    # Oculte estos modelos al generar el menú lateral (por ejemplo, auth.user)
     "hide_models": [],
 
-    # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
+    # Lista de aplicaciones (y/o modelos) para el pedido del menú lateral base 
+    # (no es necesario que contenga todas las aplicaciones/modelos)
     "order_with_respect_to": ["auth", "books", "books.author", "books.book"],
 
-    # Custom links to append to app groups, keyed on app name
+    # Enlaces personalizados para agregar a grupos de aplicaciones, 
+    # Ingresados ​​en el nombre de la aplicación
     "custom_links": {
         "books": [{
             "name": "Make Messages", 
@@ -85,42 +89,35 @@ JAZZMIN_SETTINGS = {
         }]
     },
 
-    # Custom icons for side menu apps/models See https://fontawesome.com/icons?d=gallery&m=free&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.13.0,5.12.0,5.11.2,5.11.1,5.10.0,5.9.0,5.8.2,5.8.1,5.7.2,5.7.1,5.7.0,5.6.3,5.5.0,5.4.2
-    # for the full list of 5.13.0 free icon classes
+    # Íconos personalizados para aplicaciones/modelos del menú lateral 
     "icons": {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
     },
-    # Icons that are used when one is not manually specified
+    
+    # Iconos que se usan cuando uno no se especifica manualmente
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
 
     #################
     # Related Modal #
     #################
-    # Use modals instead of popups
+    # Use modales en lugar de ventanas emergentes
     "related_modal_active": False,
 
     #############
     # UI Tweaks #
     #############
-    # Relative paths to custom CSS/JS scripts (must be present in static files)
-    "custom_css": None,
+
+    # Rutas relativas a scripts CSS/JS personalizados 
+    # (deben estar presentes en archivos estáticos) "custom_css": None,
     "custom_js": None,
-    # Whether to show the UI customizer on the sidebar
+    
+    # Si mostrar el personalizador de IU en la barra lateral
     "show_ui_builder": False,
 
-    ###############
-    # Change view #
-    ###############
-    # Render out the change view as a single form, or in tabs, current options are
-    # - single
-    # - horizontal_tabs (default)
-    # - vertical_tabs
-    # - collapsible
-    # - carousel
     "changeform_format": "horizontal_tabs",
-    # override change forms on a per modeladmin basis
+    # anular los formularios de cambio según el administrador del modelo
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
 }
