@@ -120,4 +120,7 @@ JAZZMIN_SETTINGS = {
     "changeform_format": "horizontal_tabs",
     # anular los formularios de cambio según el administrador del modelo
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
+
+
+    "custom_css": "/StyleTatto/StyleTatto/css/style.css",
 }
