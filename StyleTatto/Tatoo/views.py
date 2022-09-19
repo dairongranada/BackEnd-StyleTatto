@@ -1,16 +1,16 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Citas,Publicacion,RegistroTatuadores,RegistroUsuarios
-from .serializers import CitasSerializer,PublicacionSerializers,RegistroUsuariosSerializers,RegistroTatuadoresSerializers
+from .models import *
+from .serializers import *
 
 
 class CitasViewsets(viewsets.ModelViewSet):
-   queryset = Citas.objects.all()
-   serializer_class = CitasSerializer
+    queryset = Citas.objects.all()
+    serializer_class = CitasSerializer
 
-class PublicacionViewsets(viewsets.ModelViewSet):
-    queryset=Publicacion.objects.all()
-    serializer_class=PublicacionSerializers
+class PortafolioTatuadoresViewsets(viewsets.ModelViewSet):
+    queryset=Portafolio_Tatuadores.objects.all()
+    serializer_class=PortafolioTatuadoresSerializers
 
 
 class RegistroUsuarioViewsets(viewsets.ModelViewSet):

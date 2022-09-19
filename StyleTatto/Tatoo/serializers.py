@@ -1,15 +1,14 @@
 from rest_framework import serializers
-from .models import Citas,Publicacion,RegistroUsuarios,RegistroTatuadores
-
+from .models import *
 
 class CitasSerializer(serializers.ModelSerializer):
     class Meta:
         model = Citas
         fields= "__all__"
 
-class PublicacionSerializers(serializers.ModelSerializer):
+class PortafolioTatuadoresSerializers(serializers.ModelSerializer):
     class Meta:
-        model= Publicacion
+        model= Portafolio_Tatuadores
         fields= "__all__"
        
 
