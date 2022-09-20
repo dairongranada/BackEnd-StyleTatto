@@ -1,38 +1,58 @@
 from datetime import datetime
 from tkinter import CASCADE
 from django.db import models
+from .choices import generos
 
 class Departamentos (models.Model):
     nombre = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.nombre
+
 class Localidades(models.Model):
     fk_departamento = models.ForeignKey(Departamentos, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=30)
+
+    def __str__(self) -> str:
+        return self.nombre
 class RegistroUsuarios (models.Model):
     id_user = models.BigAutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     telefono = models.TextField()
+    genero = models.CharField(max_length=1, choices=generos, default='I')
     email = models.TextField(max_length=90)
     fecha_nacimiento = models.DateField()
     contraseña = models.TextField(max_length=20)
     estado = models.CharField(default='A', max_length=1)
+
+    def nombre_Usuario(self):
+        return "{} {}".format(self.nombre,self.apellido)
+
+    def __str__(self):
+        return self.nombre_Usuario()
 
 class RegistroTatuadores (models.Model):
     id_tatuador = models.BigAutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     telefono = models.TextField()
-    genero = models.TextField()
+    genero = models.CharField(max_length=1, choices=generos, default='I')
     fecha_nacimiento = models.DateField()
-    ciudad = models.ForeignKey(Localidades, on_delete=models.CASCADE)
     departamento = models.ForeignKey(Departamentos, on_delete=models.CASCADE)
+    ciudad = models.ForeignKey(Localidades, on_delete=models.CASCADE)
     direccion = models.TextField()
     email = models.TextField(max_length=90)
     experiencia = models.CharField(max_length=3)
     descripcion=models.TextField(max_length=150,blank=True,default='')
     contraseña = models.TextField(max_length=20)
     estado = models.CharField(default='A', max_length=1)
+
+    def nombre_Tatuador(self):
+        return "{} {}".format(self.nombre,self.apellido)
+
+    def __str__(self):
+        return self.nombre_Tatuador()
 
 class Citas(models.Model):
     id_cita = models.BigAutoField(primary_key=True)
