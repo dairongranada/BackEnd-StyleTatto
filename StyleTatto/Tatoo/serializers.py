@@ -11,8 +11,11 @@ class CitasSerializer(serializers.ModelSerializer):
 class PortafolioTatuadoresSerializers(serializers.ModelSerializer):
     class Meta:
         model= Portafolio_Tatuadores
-        fields= "__all__"
-       
+        fields=(
+            'tatuador',
+            'imagen',
+            'descripcion'
+        )
 
 
 # FORMULARIOS  REGISTROS
