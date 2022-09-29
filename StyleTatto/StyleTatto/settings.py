@@ -1,8 +1,8 @@
 import os
 from pathlib import Path
+from sys import api_version
+from webbrowser import get
 from django.conf.global_settings import LANGUAGES as DJANGO_LANGUAGES
-
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -142,7 +142,7 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Texto de bienvenida en la pantalla de inicio de sesión
-    "welcome_sign": "Bienvenido a STYLE TATTO",
+    "welcome_sign": "Administrador StyleTattoo",
 
     # Copyright on the footer
     "copyright": "STYLE TATTO",
@@ -163,8 +163,6 @@ JAZZMIN_SETTINGS = {
     "topmenu_links": [
         
         {"name": "Home Admin",  "url": "admin:index", "permissions": ["auth.view_user"]},
-
-        {"name": "Style Tatto", "url": "http://127.0.0.1:8000/", "new_window": True},
 
         {"model": "auth.User"},
 
