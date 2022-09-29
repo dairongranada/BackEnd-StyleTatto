@@ -41,13 +41,13 @@ class RegistroTatuadoresSerializers(serializers.ModelSerializer):
             'apellido',
             'telefono',
             'genero',
-            'contraseña',
             'departamento',
             'ciudad',
             'direccion',
             'email',
             'descripcion',
-            'experiencia'
+            'experiencia',
+            'contraseña'
         )
 
 class RegistroDepartamentoserializers(serializers.ModelSerializer):

@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from distutils.command.config import config
 from rest_framework import viewsets
 from .models import *
 from .serializers import *
-
+from django.shortcuts import render
 
 class CitasViewsets(viewsets.ModelViewSet):
     queryset = Citas.objects.all()
