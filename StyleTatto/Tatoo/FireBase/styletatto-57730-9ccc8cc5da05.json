@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "styletatto-57730",
+  "private_key_id": "9ccc8cc5da05a88c5e5bcc4b5cd804390f9e64c2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBORCoQT8+4jeV\nibB70Wm2EPaAowtsIgVCzWN0RZITdbaHCq60HCwhAfuJWk4wLd91o6/DghDLFY+L\nYbjpcLaK0LHbBVG9iwdok6DtdaZiBFccAVDNnDmUkDRcBG1DmG3v8uv9ZFQiH3r3\nKJGYYmjfSvvuC/Qjz+bK6m0rs1+S6M4ZxvbWkN19dvFGqYQP1RPn3GIgDbcdJRVV\n6KQ/ce4E8RhP51Q9coJzj/FtLRIB+j7bPhrolf7Xj1baYbxgo3MlmebT/E7zeCTA\nDr0wCdtiJ6MY98TCYuTufGFTcI62X/B9g+5WolUtZpbnoO8Lkl7YTRwfe65psTwl\nv+0Zi187AgMBAAECggEAAhZfu7GYwVEoUJFAOtY0Uic0wocAZJapf+NAI81smpE2\n+5Z99KwpPeILmZxEI/ka5OZzy6ToEYmWF2di3AK/thgzE66nB2ktF1Ag+O/AcGaj\nmkXZXZ9Gb/hu2F+j3osTBPiW3BHtZsD4Txs9F2xYvbDNr/CpHonscFy/+Szi529f\nmg7RDHm7wvSrAiCfXZ+hMRMSpxCXkqOtHWzH+SMtc6AO1rbIxX+sk5l1JV7uYs7j\nZGgc2o+l1LfX8Q8dxF3xFeXcdIAvkT+40vNtC8hREuEr+DKopW6dCwQgD/FqmdK4\n6w/XVzAiIKc6liKuN9oUQnxwbZMwnYj9a+lq4HwE4QKBgQDsqbYAIsfBC+Gw1owN\ng6MaFhdcJdeDC/88YeqmRk0cIu/Om/JJ3udApNFAtvqAK+I/0kktRAmj3jPakdVU\nN7KeA+wAXIs1Zz8OUmwKfwIskHdGf0Q5nzR3AXB8uA6/3abQ+72P7iY80sT6wWSQ\n5F/RDD2du77ZqW11wX5/wsVp5QKBgQDRAredSTKbeKjKRk4ZK6eOiVuKRD9fvBYG\n1mFIfREU2Mf9fdsxUV2rpvVhllm1XZZ6Ok+XV7YoOGPsxUX2Fj5otwgrCUoGOgoO\nOux2O2J97z/23Lp4TWR+sVMYpmsDMHh+UcWABlMfTR+3IuKRTiQM3pwuHQF2ekK0\ntatyb8KSnwKBgQCt26sRhHt8jQ76y1JN50OduVbl4gLliZ2yrTgleIXTQrMq9BNV\nQ0Rdj/cNdJ6oJBTsz73kXBQ85tLvIa03VkeIn9bzGQlHbRa8nb4zI8TkGikViA8F\nybhQKKWLaeej+eA/rIBAyTIcArakhAguDSd6umRViQQWgMoh9MjKcLp4JQKBgC9y\nG3ZT8G4EhORt8zqZg07C9Ym8llpIGwPwVGMdKOx/jV6I3GIko0vc+aTueWzHUupq\nJDkpywr0ShKscYY8ZGxm6C7EzA3/zNqQG693KZOG5RFH5/h5MQ/ldwSIepBdx2x9\naYT3apUXb9Sl0aLEh0B4pCF/qh5YAJ5/Au1WW2fnAoGBAJSK6KZuM4osRDCus9br\n63Il/hWOx4FCakbzqEGGntM2qIFW0USbJC/WlMN8+nhf23FrQsyJxWELaUyI+GXh\nPjXTX6/gtMpF+TMvYM9IjTH5gRP26gXRphsgzS1lOv1TNp/Ctn4SdWGqXMABKIrq\nUh06ho4dOC/7EgCJ/mfS5MbG\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fjum0@styletatto-57730.iam.gserviceaccount.com",
+  "client_id": "110096351018677828775",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fjum0%40styletatto-57730.iam.gserviceaccount.com"
+}
