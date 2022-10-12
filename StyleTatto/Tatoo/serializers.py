@@ -24,11 +24,9 @@ class RegistroUsuariosSerializers(serializers.ModelSerializer):
     class Meta:
         model= RegistroUsuarios
         fields= (
-            'fecha_nacimiento',
             'nombre',
             'apellido',
             'telefono',
-            'genero',
             'contraseña'
         )
 
@@ -36,11 +34,9 @@ class RegistroTatuadoresSerializers(serializers.ModelSerializer):
     class Meta:
         model= RegistroTatuadores
         fields= (
-            'fecha_nacimiento',
             'nombre',
             'apellido',
             'telefono',
-            'genero',
             'departamento',
             'ciudad',
             'direccion',

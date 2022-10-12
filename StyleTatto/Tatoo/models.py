@@ -21,7 +21,6 @@ class RegistroUsuarios (models.Model):
     apellido = models.CharField(max_length=50)
     telefono = models.TextField()
     email = models.TextField(max_length=90)
-    fecha_nacimiento = models.DateField()
     contraseña = models.TextField(max_length=20)
     estado = models.CharField(default='A', max_length=1)
 
@@ -36,7 +35,6 @@ class RegistroTatuadores (models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     telefono = models.TextField()
-    fecha_nacimiento = models.DateField()
     departamento = models.ForeignKey(Departamentos, on_delete=models.CASCADE)
     ciudad = models.ForeignKey(Localidades, on_delete=models.CASCADE)
     direccion = models.TextField()
