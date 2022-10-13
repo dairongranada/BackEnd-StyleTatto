@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Tatoo',
     'rest_framework',
-    'colorfield',
+    'colorfield'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
