@@ -1,21 +1,27 @@
+from email.policy import default
 import os
+import dj_database_url
 from pathlib import Path
 from sys import api_version
 from webbrowser import get
 from django.conf.global_settings import LANGUAGES as DJANGO_LANGUAGES
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd516ocd%_@th3#f!ykw6^$aj7us8fbaek+2^x0fei^_noo1vs$'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
+# https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME : ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
@@ -70,14 +76,10 @@ WSGI_APPLICATION = 'StyleTatto.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'styletattoo',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
+    'default': dj_database_url.config(
+        default = 'mysql://root:@localhost:3306/styletattoo',
+        conn_max_age = 6007
+    )
 }
 
 
@@ -114,11 +116,19 @@ USE_L10N = True
 USE_TZ = True
 
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# IMPORTANCION DE LA IMG
+STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')]
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
 
+if not DEBUG:   
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # MODIFICACIONES DEL ADMIN *IMPORTANTE*
 
@@ -227,11 +237,4 @@ JAZZMIN_SETTINGS = {
     "custom_js": None,
 }    
 
-
-
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# IMPORTANCION DE LA IMG
-STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')]
 
