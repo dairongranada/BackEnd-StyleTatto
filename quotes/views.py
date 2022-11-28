@@ -28,7 +28,7 @@ class ViewsQuotes(generics.GenericAPIView, mixins.ListModelMixin, mixins.CreateM
 
 
 
-class UpdateQuotes(generics.GenericAPIView,mixins.RetrieveModelMixin,mixins.UpdateModelMixin,):
+class UpdateQuotes(generics.GenericAPIView,mixins.RetrieveModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,):
     serializer_class = RegisterQuotes
     queryset = Quotes.objects.all()
 
@@ -37,6 +37,10 @@ class UpdateQuotes(generics.GenericAPIView,mixins.RetrieveModelMixin,mixins.Upda
     
     def put(self, request: Request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
+    
+    def delete(self, request: Request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
+
 
 
 
