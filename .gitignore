@@ -1,0 +1,12 @@
+/env
+/accounts/__pycache__
+/accounts/migrations/__pycache__
+/tatto/__pycache__
+/tatto/migrations/__pycache__
+/styletatto/__pycache__
+/quotes/__pycache__
+/quotes/migrations/__pycache__
+/Portafolio/__pycache__
+/portafolio/migrations/__pycache__
+/tattoDis/migrations/__pycache__
+/tattoDis/__pycache__
