@@ -15,7 +15,10 @@ class Quotes(models.Model):
     img = models.CharField(max_length=150)
     description = models.CharField(max_length=150, blank=False)
     userID = models.ForeignKey(Users, on_delete=models.CASCADE, related_name="perfilUser")
+    userName = models.CharField(max_length=150)
     artist_tattoo = models.ForeignKey(Users, on_delete=models.CASCADE, related_name= "perfilTattoo")
+    userTatto = models.CharField(max_length=150)
+
     isActive = models.BooleanField()
 
     def __str__(self) -> str:
