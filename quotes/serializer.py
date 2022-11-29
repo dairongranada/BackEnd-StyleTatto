@@ -14,3 +14,10 @@ class RegisterQuotes(serializers.ModelSerializer):
     class Meta:
         model = Quotes
         fields = '__all__'
+
+
+
+class UpdateQuotes(serializers.ModelSerializer):
+    class Meta:
+        model = Quotes
+        fields = ['isActive',]

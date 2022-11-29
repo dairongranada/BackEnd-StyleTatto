@@ -19,7 +19,7 @@ class Quotes(models.Model):
     artist_tattoo = models.ForeignKey(Users, on_delete=models.CASCADE, related_name= "perfilTattoo")
     userTatto = models.CharField(max_length=150)
 
-    isActive = models.BooleanField()
+    isActive = models.CharField(max_length=150)
 
     def __str__(self) -> str:
         return self.id_quotes
