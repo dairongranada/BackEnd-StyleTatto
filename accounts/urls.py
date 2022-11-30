@@ -16,7 +16,6 @@ urlpatterns = [
      path("api/getUsers/",views.UserRetrieveAPIView.as_view(),name='getUsers' ),
      path("allUsers/", views.ProfileTCreateList.as_view(), name="ProfileTCreateList" ),
      path("allUsers/<int:pk>/", views.userUpdate.as_view(), name="userUpdate" ),
-
      path("listTattoo/", include(router.urls))
 
 
