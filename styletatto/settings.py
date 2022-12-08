@@ -2,6 +2,8 @@ import os
 import dj_database_url
 from pathlib import Path
 from django.conf.global_settings import LANGUAGES 
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,13 +14,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k(-vwh84!+*p#1kf&8j2m5a#4@$d%2vuu8x^5p+b2g6a5@rir8"
+SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
-
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:    
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
@@ -53,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
 
@@ -108,15 +113,25 @@ WSGI_APPLICATION = "styletatto.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
 DATABASES = {
-    'default': dj_database_url.config(
-        #Dairon
-        default = 'mysql://root:123456@localhost:3306/styletattoo',  
-        #Steven
-        #default = 'mysql://root:@localhost:3306/styletattoo',
-        conn_max_age = 6007
-    )
-}
+
+    'default': dj_database_url.config(             
+        default='postgresql://postgres:postgres@localhost:5432/mysite',        
+        conn_max_age=600    
+    
+    )}
+
+    # 'default': dj_database_url.config(
+
+
+        # #Dairon
+        # default = 'mysql://root:123456@localhost:3306/styletattoo',  
+        # #Steven
+        # #default = 'mysql://root:@localhost:3306/styletattoo',
+        # conn_max_age = 6007
+    # )}
+
 
 
 
